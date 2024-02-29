@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #f5f5f5;
     color: #333;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
@@ -15,23 +15,31 @@ body {
     padding: 50px 20px;
     margin: 0 auto;
     max-width: 980px;
+    text-align: center;
   }
   
   .grid {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: grid; 
+    grid-template-columns: 3fr 1fr;
+    gap: 15px; 
   }
   
   nav {
     background-color: #000;
     padding: .5em;
+    position: sticky; 
+    top: 0; 
   }
   
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex; 
+    justify-content: space-evenly;
   }
   
   nav a {
@@ -44,8 +52,34 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 2px; 
   }
 
   .feature {
-      width: 200px;
+    width: 200px;
+    float: inline-start;
+    margin-right: 20px; 
   }
+
+
+
+@media screen and (max-width: 575px) {
+  nav {
+    position: static; 
+  }
+
+  nav ul {
+    flex-direction: column; 
+    gap: 20px; 
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid {
+    display: flex; 
+    flex-direction: column;
+  }
+}
