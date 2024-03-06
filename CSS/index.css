@@ -1,0 +1,185 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 16px;
+    background-color: #90ab7e;
+    margin: 0;
+}
+
+header {
+    margin: 20px;
+}
+
+nav {
+    flex: 100%; 
+    display: flex;
+    background-color: #f5e3a4;
+    position: sticky; 
+    top: 0px; 
+    margin: 20px 0px; 
+    z-index: 3;
+}
+
+nav ul {
+    flex: 2;
+    display: flex;
+    font-weight: bold; 
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a, nav span {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+nav span {
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #db592a;
+}
+
+#intro {
+    background-color: #db592a;
+    display: flex;
+    padding: 20px; 
+    align-items: center;
+}
+
+#intro img {
+    width: 50%;
+    margin-right: 20px; 
+}
+
+#season {
+    display: flex; 
+    flex-direction: column; 
+    font-size: 1.2em;
+}
+
+main img {
+    width: 100%;
+    opacity: 20%;
+    position: absolute; 
+    z-index: 1;
+} 
+
+article {
+    padding: 30px; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 100px; 
+    color: white;
+    position: relative; 
+    z-index: 2;
+}
+
+.event {
+    text-transform: uppercase;
+    margin: 20px 0px; 
+    padding: 10px; 
+    border: 2px solid #f5e3a4;
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event div{
+    color: black;
+    flex-basis: 500px; 
+}
+
+.title {
+    font-weight: bold;
+}
+
+.event span {
+    background-color: black;
+    padding: 10px; 
+}
+
+.event span:active {
+    background-color: #db592a;
+}
+
+main p {
+    display: none;
+}
+
+footer {
+    background-color: #db592a;
+    margin-top: 2em;
+    padding: 6px;
+    z-index: 4;
+}
+
+footer p {
+    font-size: small;
+    margin-left: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+        position: relative;
+        right: 20px;
+    }
+
+    nav li {
+        border: 1px solid #90ab7e;
+    }
+    
+    #intro {
+        display: flex;
+        flex-direction: column;
+        padding: 20px; 
+    }
+    
+    #intro img {
+        width: 100%;
+        margin: 0px;
+    }
+
+    #season {
+        font-size: 1em;
+    }
+
+    main img {
+        opacity: 0%;
+    }
+
+    article {
+        margin: 0px 0px;
+    }
+
+    .event {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .event span {
+        text-align: center;
+    }
+
+} 
+
+@media screen and (min-width: 1000px) {}
