@@ -66,7 +66,7 @@ nav a:active {
 
 main img {
     width: 100%;
-    opacity: 20%;
+    opacity: 0%;
     position: absolute; 
     z-index: 1;
 } 
@@ -76,7 +76,7 @@ article {
     display: flex; 
     flex-direction: column;
     justify-content: center;
-    margin: 0px 100px; 
+    margin: 0px 20px; 
     color: white;
     position: relative; 
     z-index: 2;
@@ -86,7 +86,6 @@ article {
     text-transform: uppercase;
     margin: 20px 0px; 
     padding: 10px; 
-    border: 2px solid #f5e3a4;
     display: flex;
     flex: 2;
     justify-content: space-between;
@@ -95,7 +94,7 @@ article {
 
 .event div{
     color: black;
-    flex-basis: 500px; 
+    flex-basis: 300px; 
 }
 
 .title {
@@ -128,7 +127,7 @@ footer p {
     color: white;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     header {
         text-align: center;
     }
@@ -161,10 +160,6 @@ footer p {
         font-size: 1em;
     }
 
-    main img {
-        opacity: 0%;
-    }
-
     article {
         margin: 0px 0px;
     }
@@ -182,4 +177,20 @@ footer p {
 
 } 
 
-@media screen and (min-width: 1000px) {}
+@media screen and (min-width: 1500px) {
+    main img {
+        opacity: 15%;
+    }
+
+    article {
+        margin: 0px 100px; 
+    }
+
+    .event {
+        border: 2px solid #f5e3a4;
+    }
+
+    .event div {
+        flex-basis: 500px; 
+    }
+}
