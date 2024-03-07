@@ -127,6 +127,19 @@ footer p {
     color: white;
 }
 
+#read_more1{
+    width: 25vw;
+    height: 20vh;
+    background-color: indianred;
+    transition: color 1s, background-color 2s, margin-left 2s;
+}
+
+#button1:hover {
+    color: whitesmoke;
+    background-color: purple;
+    margin-left: 74.5%;
+}
+
 @media screen and (max-width: 500px) {
     header {
         text-align: center;
