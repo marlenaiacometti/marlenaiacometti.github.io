@@ -6,7 +6,13 @@ body {
 }
 
 header {
+    text-align: center;
     margin: 20px;
+    transition: letter-spacing 4s;
+}
+
+header:hover {
+    letter-spacing: 10px;
 }
 
 nav {
@@ -77,7 +83,7 @@ article {
     flex-direction: column;
     justify-content: center;
     margin: 0px 20px; 
-    color: white;
+    color: black;
     position: relative; 
     z-index: 2;
 }
@@ -90,11 +96,11 @@ article {
     flex: 2;
     justify-content: space-between;
     align-items: center;
+    border: 2px solid #f5e3a4;
 }
 
-.event div{
-    color: black;
-    flex-basis: 300px; 
+.event div {
+    flex-basis: 450px; 
 }
 
 .title {
@@ -103,6 +109,7 @@ article {
 
 .event span {
     background-color: black;
+    color: white;
     padding: 10px; 
 }
 
@@ -110,8 +117,15 @@ article {
     background-color: #db592a;
 }
 
-main p {
-    display: none;
+.event a{
+    color: white; 
+    text-decoration: none;
+}
+
+h3 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 footer {
@@ -125,19 +139,6 @@ footer p {
     font-size: small;
     margin-left: 20px;
     color: white;
-}
-
-#read_more1{
-    width: 25vw;
-    height: 20vh;
-    background-color: indianred;
-    transition: color 1s, background-color 2s, margin-left 2s;
-}
-
-#button1:hover {
-    color: whitesmoke;
-    background-color: purple;
-    margin-left: 74.5%;
 }
 
 @media screen and (max-width: 500px) {
@@ -203,7 +204,7 @@ footer p {
         border: 2px solid #f5e3a4;
     }
 
-    .event div {
+    .leftside {
         flex-basis: 500px; 
     }
 }
