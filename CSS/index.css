@@ -37,15 +37,11 @@ nav li {
   flex: 1;
 }
 
-nav a, nav span {
+nav a {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
-}
-
-nav span {
-    text-decoration: underline;
 }
 
 nav a:active {
@@ -122,20 +118,68 @@ article {
     text-decoration: none;
 }
 
-#all_info {
-    margin: 50px 20px;
-    letter-spacing: 0.4px;
-}
-
-#all_info h3 {
-    margin-top: 50px;
+h3 {
+    margin-top: 20px;
     text-transform: uppercase;
     font-size: 16px;
 }
 
-#all_info ul {
+h4 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+.popup ul {
     font-style: italic;
     list-style-type: circle;
+}
+
+.button {
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #f5e3a4;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.popup .close:hover {
+    color: #db592a;
 }
 
 footer {
@@ -154,17 +198,19 @@ footer p {
         letter-spacing: 0px;
     }
 
+    nav {
+        position: static;
+        margin: 0px;
+    }
+
     nav ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 10px;
+        flex-direction: column;
         position: relative;
         right: 20px;
     }
 
     nav li {
-        border: 1px solid #90ab7e;
+        padding: 1px;
     }
     
     #intro {
@@ -197,6 +243,14 @@ footer p {
         text-align: center;
     }
 
+    .popup {
+        width: 80%;
+        font-size: 0.8em;
+    }
+
+    h3 {
+        margin-top: 30px; 
+    }
 } 
 
 @media screen and (min-width: 1500px) {
@@ -216,7 +270,8 @@ footer p {
         flex-basis: 500px; 
     }
 
-    #all_info {
-        margin: 75px 20px 50px 20px;
+    footer {
+        position: relative;
+        top: 30px;
     }
 }
