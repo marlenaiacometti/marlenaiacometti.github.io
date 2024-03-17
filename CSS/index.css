@@ -261,8 +261,8 @@ footer p {
         width: 80%;
     }
 
-    h3 {
-        margin-top: 35px; 
+    .popup h3 {
+        margin-top: 40px;
     }
 } 
 
