@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+
+    <style>
+        body {
+            background-color: ivory;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center; 
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+        }
+
+        #button1 {
+            background-color: #d7e65a;
+            font-weight: bold; 
+            padding: 10px; 
+            width: 200px; 
+        }
+        #button2 {
+            background-color: red;
+            font-weight: bold; 
+            padding: 10px; 
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>:)</h1>
+    <button type="button" id="button1">Press Me!</button>
+    <button type="button" id="button2">Don't Press Me!</button>
+    <script>
+        const heading = document.querySelector("h1");
+        
+        const button1 = document.querySelector("#button1");
+        button1.addEventListener('click', textPopup); 
+        button1.addEventListener('click', changeText1);
+
+        const button2 = document.querySelector("#button2"); 
+        button2.addEventListener('click', changeText); 
+
+        function textPopup() {
+            alert('great job!');
+        }
+
+        function changeText1() {
+            heading.textContent = `:)`;
+        }
+
+        function changeText() {
+            heading.textContent = `:(`;
+        }
+    </script>
+</body>
+</html>
