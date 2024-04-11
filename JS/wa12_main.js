@@ -44,4 +44,13 @@ function getAnswer() {
   answerText.textContent = 'Season ' + answer1 + ', Episode ' + answer2;
 }
 
-getQuote(); 
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}

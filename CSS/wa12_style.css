@@ -23,6 +23,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 3;
     width: 600px;
     height: 475px; 
     background-color: #414347;
@@ -111,6 +112,63 @@ html {
     font-style: italic;
     font-size: 18px; 
   }
+
+  #loader {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -76px 0 0 -63px;
+    z-index: 1;
+    border: 16px solid #F9FAFB;
+    border-radius: 50%;
+    border-top: 16px solid #FFF675;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+#clipart {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -66px 0 0 -52px;
+  z-index: 2;
+}
   
   @media screen and (max-width: 600px) {
     .app {

@@ -11,23 +11,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="app">
-      <header>Burger of the Day</header>
-      <section class="quotes">
-        <div class="quote-text" id="js-burger-text"></div>
-        <div class="quote-text" id="js-episode-text"></div>
-      </section>
-      <section class="controls" >
-        <button type="button" id="js-new-burger" class="new-burger button">
-          Generate a New Burger!
-        </button>
-        <button type="button" id="js-episode" class="episode button">
-          Tell Me the Episode!
-        </button>
-      </section>
-    </div>
+<body onload="myFunction()">
+  <div id="loader"></div>
+  <img id="clipart" src="../img/burger.png" alt="Bob's Burgers burger clipart">
 
-    <script src="../JS/wa12_main.js"></script>
+  <div class="animate_bottom" style="display:none;"  id="myDiv">
+  <div class="app">
+    <header>Burger of the Day</header>
+    <section class="quotes">
+      <div class="quote-text" id="js-burger-text"></div>
+      <div class="quote-text" id="js-episode-text"></div>
+    </section>
+    <section class="controls" >
+      <button type="button" id="js-new-burger" class="new-burger button">
+        Generate a New Burger!
+      </button>
+      <button type="button" id="js-episode" class="episode button">
+        Tell Me the Episode!
+      </button>
+    </section>
+  </div></div>
+    
+  <script src="../JS/wa12_main.js"></script>
 </body>
 </html>
+
+<!-- For my extension/ added feature, I have a "loading screen" every time the page first opens up or is reloaded. This features a circle spinning around to signal that the page is loading, paired with a piece of clipart from the television show. --> 
