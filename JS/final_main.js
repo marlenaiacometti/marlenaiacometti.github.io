@@ -4,8 +4,10 @@ function displayVolume(volume) {
   const volumeText = document.querySelector("#volume-display"); 
   if (volume < 0) {
     volume = 0;
+    console.log("Volume changed to " + volume)
   } else if (volume > 100) {
     volume = 100;
+    console.log("Volume changed to " + volume)
   }
   volumeText.textContent = "Volume: " + volume; 
 }
@@ -38,7 +40,7 @@ const btn = document.querySelector("#start-interaction");
 btn.addEventListener('click', startInteraction); 
 
 function startInteraction() {
-  console.log("TEST");
+  console.log("Volume interaction started");
   const body = document.body;
 
   const canvas = document.createElement("canvas");
@@ -109,9 +111,10 @@ function startInteraction() {
 
               // IMPACT VOLUME WITH COLLISION: 
 
-              var posOrNeg = Math.random() < 0.5 ? -1 : 1; 
+              var posOrNeg = Math.round(Math.random()) * 2 - 1; 
 
               volume += this.size*posOrNeg;
+              console.log("Volume changed to " + volume)
               displayVolume(volume);
             }
           }
@@ -170,6 +173,7 @@ function startInteraction() {
   // CLOSING DISPLAY INTERACTION: 
 
   function closeDisplay() {
+    console.log("Volume interaction ended");
     canvas.parentNode.removeChild(canvas);
     closeBtn.parentNode.removeChild(closeBtn); 
 
