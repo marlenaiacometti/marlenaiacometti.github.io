@@ -1,19 +1,12 @@
 // SETTING UP VOLUME DISPLAY: 
 
-function displayVolume(volume) {
-  const volumeText = document.querySelector("#volume-display"); 
-  if (volume < 0) {
-    volume = 0;
-    console.log("Volume changed to " + volume)
-  } else if (volume > 100) {
-    volume = 100;
-    console.log("Volume changed to " + volume)
-  }
-  volumeText.textContent = "Volume: " + volume; 
-}
-
 var volume = 50;
 displayVolume(volume); 
+
+function displayVolume(volume) {
+  const volumeText = document.querySelector("#volume-display"); 
+  volumeText.textContent = "Volume: " + volume; 
+};
 
 
 // TRACK MOUSE POSITION: 
@@ -78,6 +71,13 @@ function startInteraction() {
     }
   
     update() {
+      if(this.color != "#F8EEBF"){
+        if(this.velX == 0 && this.velY == 0) {
+          this.velX = random(-10, 10); 
+          this.velY = random(-10, 10);
+        }
+      }
+
       if ((this.x + this.size) >= width){
         this.velX = -(this.velX); 
       }
@@ -114,6 +114,13 @@ function startInteraction() {
               var posOrNeg = Math.round(Math.random()) * 2 - 1; 
 
               volume += this.size*posOrNeg;
+
+              if (volume < 0) {
+                volume = 0;
+              } else if (volume > 100) {
+                volume = 100;
+              };
+
               console.log("Volume changed to " + volume)
               displayVolume(volume);
             }
