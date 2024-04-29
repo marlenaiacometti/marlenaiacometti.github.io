@@ -7,7 +7,7 @@ function displayVolume(volume) {
   const volumeText = document.querySelector("#volume-display"); 
   volumeText.textContent = "Volume: " + volume; 
 
-  var audio = document.getElementById("myaudio");
+  var audio = document.getElementById("audio");
   audio.volume = volume*0.01;
 };
 
