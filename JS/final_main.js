@@ -1,6 +1,6 @@
 // SETTING UP VOLUME DISPLAY: 
 
-var volume = 10;
+var volume = 0;
 displayVolume(volume); 
 
 function displayVolume(volume) {
