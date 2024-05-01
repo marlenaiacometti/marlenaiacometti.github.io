@@ -36,6 +36,10 @@ function startInteraction() {
   console.log("Volume interaction started");
   const body = document.body;
 
+  var audio = document.querySelector("#myaudio");
+  audio.volume = volume*0.01;
+  audio.play();
+
   const canvas = document.createElement("canvas");
   canvas.setAttribute("class", "displayinteraction");
   body.appendChild(canvas);
@@ -81,13 +85,13 @@ function startInteraction() {
       if ((this.x + this.size) >= width){
         this.velX = -(this.velX); 
       }
-      if ((this.x - this.size) <= 0){
+      if ((this.x - this.size) <= 0.2*this.size){
         this.velX = -(this.velX); 
       }
       if ((this.y + this.size) >= height){
         this.velY = -(this.velY); 
       }
-      if ((this.y - this.size) <= 0){
+      if ((this.y - this.size) <= 0.1*this.size){
         this.velY = -(this.velY); 
       }
 
@@ -200,6 +204,3 @@ function startInteraction() {
   canvas.style.backgroundColor = "#202D36";
 }
 
-var audio = document.querySelector("#myaudio");
-audio.volume = volume*0.01;
-audio.play();
