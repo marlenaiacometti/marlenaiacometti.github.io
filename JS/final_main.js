@@ -6,8 +6,6 @@ displayVolume(volume);
 function displayVolume(volume) {
   const volumeText = document.querySelector("#volume-display"); 
   volumeText.textContent = "Volume: " + volume; 
-  var audio = document.getElementById("myaudio");
-  audio.volume = volume*0.01;
 };
 
 
@@ -194,10 +192,14 @@ function startInteraction() {
 
   const closeBtn = document.createElement("button");
   closeBtn.setAttribute("class", "closeBtn");
-  closeBtn.textContent = "x";
+  closeBtn.textContent = "SET";
   body.appendChild(closeBtn);
 
   closeBtn.addEventListener("click", closeDisplay)
 
   canvas.style.backgroundColor = "#202D36";
 }
+
+var audio = document.querySelector("#myaudio");
+audio.volume = volume*0.01;
+audio.play();
